@@ -1,3 +1,21 @@
 <h1>Pages#home</h1>
 <h1>Pages 1 </h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<!-- afficher une variable dans la vue + rajouter la valeur dna sle controller (@titi = 5) -->
+<p>Ceci est ma première variable = <%= @titi %>.</p>
+
+<!--condition-->
+<p>Ceci est ma première condition : <%= @titi %>.</p>
+
+<% if @titi == 42 %>
+  <p>Super, la variable vaut 42 !</p>
+<% else %>
+  <p>Mince, la variable ne vaut pas 42 !</p>
+<% end %>
+
+<!--boucle-->
+<p>Ceci est ma première boucle :</p>
+<% @titi.times do |i|%>
+<%= i %> <!-- "puts" c'est pareil de que "="-->
+<% end %>
